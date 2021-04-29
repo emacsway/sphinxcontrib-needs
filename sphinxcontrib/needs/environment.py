@@ -33,6 +33,9 @@ def safe_add_file(filename: Path, app: Sphinx):
     if filename.suffix == ".js":
         if hasattr(app.builder, "script_files") and static_data_file not in app.builder.script_files:
             app.add_js_file(str(filename))
+            print(f'js_file added {filename}')
+        else:
+            print('PROBLEM!!', hasattr(app.builder, "script_files"), static_data_file not in app.builder.script_files)
     elif filename.suffix == ".css":
         if hasattr(app.builder, "css_files") and static_data_file not in app.builder.css_files:
             app.add_css_file(str(filename))
