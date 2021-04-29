@@ -165,7 +165,7 @@ def install_lib_static_files(app: Sphinx, env):
     source_dir = Path(__file__).parent / "libs" / "html"
     destination_dir = statics_dir / "sphinx-needs" / "libs" / "html"
 
-    files_to_copy = [f for f in source_dir.glob("**/*") if f.is_file()]
+    files_to_copy = [str(f) for f in source_dir.glob("**/*") if f.is_file()]
 
     print('INFO ----------')
     print(source_dir)
