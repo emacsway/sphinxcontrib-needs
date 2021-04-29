@@ -139,6 +139,7 @@ def install_static_files(
         brown,
     ):
         source_file = Path(source_file_path)
+        print(f'* {source_file_path}')
 
         if not source_file.is_absolute():
             raise IOError("Path must be absolute. Got: {}".format(source_file))
@@ -151,6 +152,7 @@ def install_static_files(
         destination_file.parent.mkdir(parents=True, exist_ok=True)
 
         copyfile(str(source_file), str(destination_file))
+        print(f'{source_file} -- > {destination_file}')
         return destination_file
 
 
