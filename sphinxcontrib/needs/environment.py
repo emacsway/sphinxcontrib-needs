@@ -133,11 +133,15 @@ def install_static_files(
         global status_iterator
         status_iterator = app.status_iterator
 
+    index = 0
+    print(f'length files: {len(files_to_copy)}')
     for source_file_path in status_iterator(
         files_to_copy,
         message,
         brown,
     ):
+        print(index)
+        index += 1
         source_file = Path(source_file_path)
         print(f'* {source_file_path}')
 
