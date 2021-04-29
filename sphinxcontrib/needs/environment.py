@@ -167,6 +167,11 @@ def install_lib_static_files(app: Sphinx, env):
 
     files_to_copy = [f for f in source_dir.glob("**/*") if f.is_file()]
 
+    print('INFO ----------')
+    print(source_dir)
+    print(destination_dir)
+    print(files_to_copy)
+
     install_static_files(
         app,
         source_dir,
