@@ -6,6 +6,14 @@ License
 
 .. include:: ../LICENSE
 
+0.7.0
+-----
+:Released: under development
+
+* Improvement: Providing :ref:`needs_external_needs` to allow usage and referencing of external needs.
+  (`#137 <https://github.com/useblocks/sphinxcontrib-needs/issues/137>`_)
+* Bugfix: :ref:`needtable` shows attributes with value ``False`` again.
+
 0.6.3
 -----
 :Released: under development
@@ -16,7 +24,7 @@ License
   (`#263 <https://github.com/useblocks/sphinxcontrib-needs/issues/263>`_)
 * Bugfix: CSS fix for needtable :ref:`needtable_style_row`.
   (`#195 <https://github.com/useblocks/sphinxcontrib-needs/issues/195>`_)
-* Bugfix: ``current_need` var is accessible in all need-filters.
+* Bugfix: ``current_need`` var is accessible in all need-filters.
   (`#169 <https://github.com/useblocks/sphinxcontrib-needs/issues/169>`_)
 * Bugfix: Sets defaults for color and style of need type configuration, if not set by user.
   (`#151 <https://github.com/useblocks/sphinxcontrib-needs/issues/151>`_)
